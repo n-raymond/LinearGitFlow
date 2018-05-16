@@ -35,8 +35,6 @@ git fetch -p -a --tags
     - `git rebase master`
     - `git push -f origin <feature-name>`
 
-> ![info](.README/info.png) We name `<base-commit-id>` is the UUID of the commit where your feature branch forks from `master`.
->
 > ![danger](.README/danger.png) Do not rebase a branch when several devs are working on it. Shared branch like master must be protected against push
 forces in Gitlab.
 >
