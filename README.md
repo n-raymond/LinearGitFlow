@@ -14,7 +14,7 @@
 - A **technical validation** by a *Merge Request* (MR) on Gitlab using **labels**.
 - A **functional validation** by the Product Owner.
 - **Rebase to integrate** a feature on master.
-- Gitlab- integration for `master`, `preprod` and `prod` branch/tags.
+- Gitlab- integration for `master`, `staging` and `prod` branch/tags.
 
 ### III. How to get latest devs
 To fully synchronize your local repository with distant repository, use the following command:
@@ -68,29 +68,29 @@ non-free version has the rebase option as Gitlab non-free version has it).
 
 ### VI. How to put a dev in validation (Rec)
 
-**master**, **preprod** and **prod** branches/tags are used as references to point on the commit on which the environment is deployed by Gitlab-.
+**master**, **staging** and **prod** branches/tags are used as references to point on the commit on which the environment is deployed by Gitlab-.
 
-#### 1.Use case 1: Nothing is already tested in preprod
+#### 1.Use case 1: Nothing is already tested in staging
 
-If you want to put a spefic branch or the master branch in validation, force move the `preprod` branch on it by deleting and recreating it.
+If you want to put a spefic branch or the master branch in validation, force move the `staging` branch on it by deleting and recreating it.
 
 Example :
 
-- `git branch -d preprod`
+- `git branch -d staging`
 - `git checkout <feature-name>`
-- `git branch preprod`
-- `git checkout preprod`
-- `git push -f origin preprod`
+- `git branch staging`
+- `git checkout staging`
+- `git push -f origin staging`
 
 #### 2.Use case 2: Several features must be tested in the same time
 
-To have multiple different features on the `preprod` you need to use **cheery-picks** :
+To have multiple different features on the `staging` you need to use **cheery-picks** :
 
-- `git checkout preprod`
+- `git checkout staging`
 - `git cherry-pick <commit-1> <commit-2> [...]`
 - `git push -f`
 
-> ![info](.README/info.png) `<commit-1>`, `<commit-2>`, [...] are the ids of the feature branch commits that were not already copied in `preprod`.
+> ![info](.README/info.png) `<commit-1>`, `<commit-2>`, [...] are the ids of the feature branch commits that were not already copied in `staging`.
 >
 > You can also use `git rebase -i` to reorder and group commits that come from the same feature to be more coherent and
 delete the commits of feature that are already validated and integrated on master.
@@ -123,7 +123,7 @@ Use the following commands:
 
 #### 2.How to move to production
 
-![info](.README/info.png) Actually, the `prod` is a **tag** (as it is only used as ref, it can be used in the same way as `preprod` branch...)
+![info](.README/info.png) Actually, the `prod` is a **tag** (as it is only used as ref, it can be used in the same way as `staging` branch...)
 
 To put the master in production:
 
