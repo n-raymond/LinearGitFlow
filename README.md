@@ -14,7 +14,7 @@
 - A **technical validation** by a *Merge Request* (MR) on Gitlab using **labels**.
 - A **functional validation** by the Product Owner.
 - **Rebase to integrate** a feature on master.
-- Gitlab- integration for `master`, `staging` and `prod` branch/tags.
+- Gitlab-CI integration for `master`, `staging` and `prod` branch/tags.
 
 ### III. How to get latest devs
 To fully synchronize your local repository with distant repository, use the following command:
@@ -68,7 +68,7 @@ non-free version has the rebase option as Gitlab non-free version has it).
 
 ### VI. How to put a dev in validation (Rec)
 
-**master**, **staging** and **prod** branches/tags are used as references to point on the commit on which the environment is deployed by Gitlab-.
+**master**, **staging** and **prod** branches/tags are used as references to point on the commit on which the environment is deployed by Gitlab-CI.
 
 #### 1.Use case 1: Nothing is already tested in staging
 
