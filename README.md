@@ -53,7 +53,7 @@ forces in Gitlab.
 #### 2.Prerequisites
 
 - ![gitlab](.README/gitlab.png) Create a Gitlab Label for each team member. This label will represent their approbation to validate the MR. For exemple, if the dev's
-name is George, the label could be "George-approved".
+name is Regis, the label could be "Regis-approved".
 
 #### 3.Validation
 - Do your code review.
