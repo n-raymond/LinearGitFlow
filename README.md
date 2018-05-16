@@ -8,13 +8,18 @@
 
 ## II. Technical overview
 
+_This tutorial was realized with Gitlab as Git repository provider. Thus,
+Gitlab and Gitlab-CI will be used later. If you use another repository provider
+and Continuous Integration tools, don't worry : The way to use the workflow
+will mainly be the same since the tools are similay._
+
 - `master` branch = Main branch : only contains features technically validated.
 - A **branch** per environment and **per feature** (like in *Gitflow*).
-- A **tag per version**.
+- **Rebase** to integrate a feature on master.
+- A **tag** per version.
 - A **technical validation** by a *Merge Request* (MR) on Gitlab using **labels**.
 - A **functional validation** by the Product Owner.
-- **Rebase to integrate** a feature on master.
-- Gitlab-CI integration for `master`, `staging` and `prod` branch/tags.
+- **Gitlab-CI** integration for `master`, `staging` and `prod` branch/tags.
 
 ### III. How to get latest devs
 To fully synchronize your local repository with distant repository, use the following command:
